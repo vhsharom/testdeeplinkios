@@ -2,12 +2,18 @@
 <html>
 <head>
   <title>Deep Link Example</title>
+  <script>
+    function openDeepLink() {
+      window.location.href = "nsouth://support";
+      setTimeout(redirectToAppStore, 500);
+    }
+
+    function redirectToAppStore() {
+      window.location.href = "https://itunes.apple.com/app/nsouth-support";
+    }
+  </script>
 </head>
 <body>
-  <script>
-    window.onload = function() {
-      window.location.href = "nsouth://support";
-    };
-  </script>
+  <button onclick="openDeepLink()">Open Deep Link</button>
 </body>
 </html>
